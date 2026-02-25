@@ -9,7 +9,7 @@ export default function Inventory() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const { data } = await axios.get("http://localhost:8000/api/products");
+        const { data } = await axios.get("/api/products");
         setProducts(data);
       } catch (error) {
         console.error("Failed to fetch products", error);

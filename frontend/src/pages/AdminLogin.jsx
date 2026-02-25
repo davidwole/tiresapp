@@ -12,7 +12,7 @@ export default function AdminLogin() {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:8000/api/auth/login",
+        "/api/auth/login",
         { username, password },
       );
       localStorage.setItem("adminToken", data.token);

@@ -37,7 +37,7 @@ export default function AdminDashboard() {
 
   const fetchProducts = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/api/products");
+      const { data } = await axios.get("/api/products");
       setProducts(data);
     } catch (error) {
       console.error(error);
@@ -55,7 +55,7 @@ export default function AdminDashboard() {
     if (!window.confirm("Are you sure you want to delete this product?"))
       return;
     try {
-      await axios.delete(`http://localhost:8000/api/products/${id}`, {
+      await axios.delete(`/api/products/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
         },
@@ -70,7 +70,7 @@ export default function AdminDashboard() {
   const handleToggleStock = async (product) => {
     try {
       await axios.patch(
-        `http://localhost:8000/api/products/${product._id}`,
+        `/api/products/${product._id}`,
         { inStock: !product.inStock },
         {
           headers: {
@@ -97,12 +97,12 @@ export default function AdminDashboard() {
 
       if (formConfig.id) {
         await axios.patch(
-          `http://localhost:8000/api/products/${formConfig.id}`,
+          `/api/products/${formConfig.id}`,
           payload,
           config,
         );
       } else {
-        await axios.post("http://localhost:8000/api/products", payload, config);
+        await axios.post("/api/products", payload, config);
       }
 
       setShowModal(false);

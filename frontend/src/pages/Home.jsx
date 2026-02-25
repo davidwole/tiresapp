@@ -9,7 +9,7 @@ export default function Home() {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const { data } = await axios.get("http://localhost:8000/api/products");
+                const { data } = await axios.get("/api/products");
                 setFeaturedProducts(data.slice(0, 3));
             } catch (error) {
                 console.error("Failed to fetch products", error);
