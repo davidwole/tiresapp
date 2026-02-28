@@ -30,9 +30,9 @@ export default function Home() {
       {/* Hero Section */}
       <div className="bg-gray-900 text-white py-20 px-4 bg-[url('https://res.cloudinary.com/dqf8qs0jk/image/upload/v1772291530/Tires/tires-hero_isytde.png')] bg-cover h-[28rem]">
         <h1 className="text-4xl md:text-6xl font-extrabold mb-12 text-left max-w-7xl mx-auto text-shadow-subtle">
-          Your Destination for
+          TruckTrailerTires.com
           <h1 className="text-[#fdd799] text-left max-w-7xl mx-auto mt-4 text-shadow-subtle">
-            Semi Trailer Tires
+            Atlanta's #1 Semi Trailer Marketplace
           </h1>
         </h1>
         {/* <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">
