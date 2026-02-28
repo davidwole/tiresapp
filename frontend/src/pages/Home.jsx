@@ -80,6 +80,23 @@ export default function Home() {
         </div>
       </div>
 
+      <div className="flex flex-row justify-center md:gap-4 pt-4">
+        <div className=" text-[14px] px-[0.25rem] py-[0.25rem] md:text-[1.5rem] md:px-8 md:py-2 font-[600]  flex items-center">
+          {/* <img src={Bars} className="w-[16px] md:w-[24px]" /> */}
+          <p className="md:mx-2">Bulk Discounts</p>
+        </div>
+
+        <div className=" text-[14px] px-[0.25rem] py-[0.25rem] md:text-[1.5rem] md:px-8 md:py-2 font-[600]  flex items-center">
+          {/* <img src={People} className="w-[16px] md:w-[24px]" /> */}
+          <p className="md:mx-2">We Broker Other Lots</p>
+        </div>
+
+        <div className=" text-[14px] px-[0.25rem] py-[0.25rem] md:text-[1.5rem] md:px-8 md:py-2 font-[600]  flex items-center">
+          {/* <img src={Location} className="w-[16px] md:w-[24px]" /> */}
+          <p className="md:mx-2">Same Day Pickup</p>
+        </div>
+      </div>
+
       {/* Featured Inventory */}
       {!loading && featuredProducts.length > 0 && (
         <div className="py-16  bg-[#f7f6fb]">
